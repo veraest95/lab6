@@ -11,6 +11,14 @@ def decode(encoded_password):
         pw_decode = pw_decode + str((int(item) + 7) % 10)
     return pw_decode
 '''
+
+#Jonathan Tang
+def decode(encoded_password):
+    decoded = ""
+    for char in encoded_password:
+        decoded += str((int(char) - 3) % 10)
+    return decoded
+
 if __name__ == "__main__":
     encoded_password = ""
     decoded_password = ""
